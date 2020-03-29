@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="task">
+<parameter name="browser" value="chrome" />
+	<test name="test">
+		<classes>
+			<class name="test.TestBase" />
+			<class name="test.SignUpTest" />
+			<class name="test.HomeTest" />
+			<class name="test.LoginTest." />
+			<class name="test.FailedRegisteration" />
+		</classes>
+	</test>
+</suite>
