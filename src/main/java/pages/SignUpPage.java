@@ -13,7 +13,7 @@ public class SignUpPage extends PageBases {
 	}
 	
 	@FindBy(xpath = "//input[@name='firstname']")
-	WebElement firstNameEditBox;
+	public WebElement firstNameEditBox;
 	
 	@FindBy(xpath = "//input[@name='lastname']")
 	WebElement lastNameEditBox;
@@ -32,6 +32,9 @@ public class SignUpPage extends PageBases {
 	
 	@FindBy(xpath = "//button[contains(text(),'Sign Up')]")
 	WebElement signUpButton;
+	
+	@FindBy(xpath = "//div[@class='alert alert-danger']")
+	public WebElement errorMessage;
 	
 	@FindBy(xpath = "//h3[@class='text-align-left']")
 	public WebElement welcomeStatment;

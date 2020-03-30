@@ -6,11 +6,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import data.Loadproperties;
+import pages.HomePage;
 import pages.SignUpPage;
 
 public class SignUpTest extends TestBase{
 
 	SignUpPage signUpPageObject;
+	HomePage homePAgeObject;
 	
 	String firstName=Loadproperties.userData.getProperty("firstName");
 	String lastName=Loadproperties.userData.getProperty("lastName");
@@ -19,7 +21,7 @@ public class SignUpTest extends TestBase{
 	String password=Loadproperties.userData.getProperty("password");
 	String passwordConfirmation=Loadproperties.userData.getProperty("password");
 	
-	@Test
+	@Test(priority = 1,alwaysRun = true)
 	public void signUpProcess(Method method) throws InterruptedException {
 		
 		signUpPageObject=new SignUpPage(driver);
@@ -27,6 +29,14 @@ public class SignUpTest extends TestBase{
 		Assert.assertEquals("Hi,"+" "+firstName+" "+lastName, signUpPageObject.welcomeStatment.getText());
 		System.out.println(signUpPageObject.welcomeStatment.getText());
 	}
+	
+	
+	@Test(dependsOnMethods = {"signUpProcess"})
+	public void logOut(Method method) {
+		homePAgeObject=new HomePage(driver);
+		homePAgeObject.logOutFromAccount();
+	}
+	
 	
 	
 }

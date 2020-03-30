@@ -21,6 +21,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+import data.Loadproperties;
 import utilities.Helper;
 
 public class TestBase {
@@ -28,6 +29,7 @@ public class TestBase {
 public static WebDriver driver ; 
 public static ExtentReports extent;
 public static ExtentTest logger;
+String URL=Loadproperties.userData.getProperty("url");
 
 //This is the method of firing the browser if it is chrome , firefox or ie
 	@BeforeSuite
@@ -55,7 +57,7 @@ public static ExtentTest logger;
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.navigate().to("https://www.phptravels.net/register");
+		driver.navigate().to(URL);
 		
 		//set the extent report in the destination
 		extent=new ExtentReports("C:\\Users\\melbatawy\\Documents\\applicationTask\\Reports\\Report.html",true);
@@ -84,8 +86,7 @@ public static ExtentTest logger;
 		{
 			//Adding image if the TC failed
 			logger.log(LogStatus.FAIL, "Test Case Fail","<a href='" + result.getName() + ".png" + "'><span class='label info'> ScreenShot URL</span></a>");
-			System.out.println("Failed!");
-			System.out.println("Taking Screenshot....");
+			
 			Helper.captureScreenshot(driver, result.getName());
 		}
 		

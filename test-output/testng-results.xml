@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="1" ignored="8" total="15" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="6583" started-at="2020-03-30T00:33:22 EET" finished-at="2020-03-30T00:33:28 EET">
+  <suite name="task" duration-ms="25215" started-at="2020-03-30T22:37:22 EET" finished-at="2020-03-30T22:37:47 EET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="6583" started-at="2020-03-30T00:33:22 EET" finished-at="2020-03-30T00:33:28 EET">
-      <class name="test.LoginTest">
-        <test-method status="PASS" signature="startDriver(java.lang.String)[pri:0, instance:test.LoginTest@64729b1e]" name="startDriver" is-config="true" duration-ms="11568" started-at="2020-03-30T00:33:10 EET" finished-at="2020-03-30T00:33:22 EET">
+    <test name="test" duration-ms="25215" started-at="2020-03-30T22:37:22 EET" finished-at="2020-03-30T22:37:47 EET">
+      <class name="test.TestBase">
+        <test-method status="PASS" signature="startDriver(java.lang.String)[pri:0, instance:test.TestBase@69f080ad]" name="startDriver" is-config="true" duration-ms="11497" started-at="2020-03-30T22:37:11 EET" finished-at="2020-03-30T22:37:22 EET">
           <params>
             <param index="0">
               <value>
@@ -18,18 +18,81 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startDriver -->
-        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@64729b1e]" name="report" is-config="true" duration-ms="5" started-at="2020-03-30T00:33:22 EET" finished-at="2020-03-30T00:33:22 EET">
+        <test-method status="PASS" signature="stopDriver()[pri:0, instance:test.TestBase@69f080ad]" name="stopDriver" is-config="true" duration-ms="1497" started-at="2020-03-30T22:37:47 EET" finished-at="2020-03-30T22:37:49 EET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopDriver -->
+      </class> <!-- test.TestBase -->
+      <class name="test.SignUpTest">
+        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.SignUpTest@6568f998]" name="report" is-config="true" duration-ms="3" started-at="2020-03-30T22:37:22 EET" finished-at="2020-03-30T22:37:22 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void test.LoginTest.signUpProcess(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+                <![CDATA[public void test.SignUpTest.signUpProcess(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method status="PASS" signature="signUpProcess(java.lang.reflect.Method)[pri:1, instance:test.LoginTest@64729b1e]" name="signUpProcess" duration-ms="3628" started-at="2020-03-30T00:33:22 EET" finished-at="2020-03-30T00:33:25 EET">
+        <test-method status="PASS" signature="signUpProcess(java.lang.reflect.Method)[pri:1, instance:test.SignUpTest@6568f998]" name="signUpProcess" duration-ms="3653" started-at="2020-03-30T22:37:22 EET" finished-at="2020-03-30T22:37:26 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.SignUpTest.signUpProcess(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signUpProcess -->
+        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.SignUpTest@6568f998]" name="prepareReport" is-config="true" duration-ms="2" started-at="2020-03-30T22:37:26 EET" finished-at="2020-03-30T22:37:26 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signUpProcess status=SUCCESS method=SignUpTest.signUpProcess(java.lang.reflect.Method)[pri:1, instance:test.SignUpTest@6568f998] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareReport -->
+        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.SignUpTest@6568f998]" name="report" is-config="true" duration-ms="0" started-at="2020-03-30T22:37:26 EET" finished-at="2020-03-30T22:37:26 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.SignUpTest.logOut(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="logOut(java.lang.reflect.Method)[pri:0, instance:test.SignUpTest@6568f998]" name="logOut" duration-ms="2585" started-at="2020-03-30T22:37:26 EET" depends-on-methods="test.SignUpTest.signUpProcess" finished-at="2020-03-30T22:37:28 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.SignUpTest.logOut(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.SignUpTest@6568f998]" name="prepareReport" is-config="true" duration-ms="0" started-at="2020-03-30T22:37:28 EET" finished-at="2020-03-30T22:37:28 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logOut status=SUCCESS method=SignUpTest.logOut(java.lang.reflect.Method)[pri:0, instance:test.SignUpTest@6568f998] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareReport -->
+      </class> <!-- test.SignUpTest -->
+      <class name="test.LoginTest">
+        <test-method status="PASS" signature="signUpProcess(java.lang.reflect.Method)[pri:1, instance:test.LoginTest@45d4421d]" name="signUpProcess" duration-ms="5361" started-at="2020-03-30T22:37:28 EET" finished-at="2020-03-30T22:37:34 EET">
           <params>
             <param index="0">
               <value>
@@ -40,18 +103,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- signUpProcess -->
-        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.LoginTest@64729b1e]" name="prepareReport" is-config="true" duration-ms="1" started-at="2020-03-30T00:33:25 EET" finished-at="2020-03-30T00:33:25 EET">
+        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@45d4421d]" name="report" is-config="true" duration-ms="0" started-at="2020-03-30T22:37:28 EET" finished-at="2020-03-30T22:37:28 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=signUpProcess status=SUCCESS method=LoginTest.signUpProcess(java.lang.reflect.Method)[pri:1, instance:test.LoginTest@64729b1e] output={null}]]]>
+                <![CDATA[public void test.LoginTest.signUpProcess(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.LoginTest@45d4421d]" name="prepareReport" is-config="true" duration-ms="0" started-at="2020-03-30T22:37:34 EET" finished-at="2020-03-30T22:37:34 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signUpProcess status=SUCCESS method=LoginTest.signUpProcess(java.lang.reflect.Method)[pri:1, instance:test.LoginTest@45d4421d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareReport -->
-        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@64729b1e]" name="report" is-config="true" duration-ms="0" started-at="2020-03-30T00:33:25 EET" finished-at="2020-03-30T00:33:25 EET">
+        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@45d4421d]" name="report" is-config="true" duration-ms="1" started-at="2020-03-30T22:37:34 EET" finished-at="2020-03-30T22:37:34 EET">
           <params>
             <param index="0">
               <value>
@@ -62,7 +136,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method status="PASS" signature="logOut(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@64729b1e]" name="logOut" duration-ms="2501" started-at="2020-03-30T00:33:25 EET" depends-on-methods="test.LoginTest.signUpProcess" finished-at="2020-03-30T00:33:28 EET">
+        <test-method status="PASS" signature="logOut(java.lang.reflect.Method)[pri:2, instance:test.LoginTest@45d4421d]" name="logOut" duration-ms="2737" started-at="2020-03-30T22:37:34 EET" depends-on-methods="test.LoginTest.signUpProcess" finished-at="2020-03-30T22:37:36 EET">
           <params>
             <param index="0">
               <value>
@@ -73,18 +147,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.LoginTest@64729b1e]" name="prepareReport" is-config="true" duration-ms="0" started-at="2020-03-30T00:33:28 EET" finished-at="2020-03-30T00:33:28 EET">
+        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.LoginTest@45d4421d]" name="prepareReport" is-config="true" duration-ms="1" started-at="2020-03-30T22:37:36 EET" finished-at="2020-03-30T22:37:36 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=logOut status=SUCCESS method=LoginTest.logOut(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@64729b1e] output={null}]]]>
+                <![CDATA[[TestResult name=logOut status=SUCCESS method=LoginTest.logOut(java.lang.reflect.Method)[pri:2, instance:test.LoginTest@45d4421d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareReport -->
-        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@64729b1e]" name="report" is-config="true" duration-ms="0" started-at="2020-03-30T00:33:28 EET" finished-at="2020-03-30T00:33:28 EET">
+        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.LoginTest@45d4421d]" name="report" is-config="true" duration-ms="0" started-at="2020-03-30T22:37:36 EET" finished-at="2020-03-30T22:37:36 EET">
           <params>
             <param index="0">
               <value>
@@ -95,7 +169,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method status="PASS" signature="login(java.lang.reflect.Method)[pri:2, instance:test.LoginTest@64729b1e]" name="login" duration-ms="379" started-at="2020-03-30T00:33:28 EET" finished-at="2020-03-30T00:33:28 EET">
+        <test-method status="PASS" signature="login(java.lang.reflect.Method)[pri:3, instance:test.LoginTest@45d4421d]" name="login" duration-ms="389" started-at="2020-03-30T22:37:36 EET" depends-on-methods="test.LoginTest.logOut" finished-at="2020-03-30T22:37:37 EET">
           <params>
             <param index="0">
               <value>
@@ -106,22 +180,131 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.LoginTest@64729b1e]" name="prepareReport" is-config="true" duration-ms="0" started-at="2020-03-30T00:33:28 EET" finished-at="2020-03-30T00:33:28 EET">
+        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.LoginTest@45d4421d]" name="prepareReport" is-config="true" duration-ms="1" started-at="2020-03-30T22:37:37 EET" finished-at="2020-03-30T22:37:37 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=login status=SUCCESS method=LoginTest.login(java.lang.reflect.Method)[pri:2, instance:test.LoginTest@64729b1e] output={null}]]]>
+                <![CDATA[[TestResult name=login status=SUCCESS method=LoginTest.login(java.lang.reflect.Method)[pri:3, instance:test.LoginTest@45d4421d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- prepareReport -->
-        <test-method status="PASS" signature="stopDriver()[pri:0, instance:test.LoginTest@64729b1e]" name="stopDriver" is-config="true" duration-ms="1322" started-at="2020-03-30T00:33:28 EET" finished-at="2020-03-30T00:33:30 EET">
+      </class> <!-- test.LoginTest -->
+      <class name="test.MailValidationTest">
+        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.MailValidationTest@782fd504]" name="report" is-config="true" duration-ms="0" started-at="2020-03-30T22:37:37 EET" finished-at="2020-03-30T22:37:37 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.MailValidationTest.validateEmail(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stopDriver -->
-      </class> <!-- test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="validateEmail(java.lang.reflect.Method)[pri:0, instance:test.MailValidationTest@782fd504]" name="validateEmail" duration-ms="5545" started-at="2020-03-30T22:37:37 EET" finished-at="2020-03-30T22:37:42 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.MailValidationTest.validateEmail(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEmail -->
+        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.MailValidationTest@782fd504]" name="prepareReport" is-config="true" duration-ms="1" started-at="2020-03-30T22:37:42 EET" finished-at="2020-03-30T22:37:42 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateEmail status=SUCCESS method=MailValidationTest.validateEmail(java.lang.reflect.Method)[pri:0, instance:test.MailValidationTest@782fd504] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareReport -->
+      </class> <!-- test.MailValidationTest -->
+      <class name="test.NameValidationTest">
+        <test-method status="PASS" signature="report(java.lang.reflect.Method)[pri:0, instance:test.NameValidationTest@1537c744]" name="report" is-config="true" duration-ms="1" started-at="2020-03-30T22:37:42 EET" finished-at="2020-03-30T22:37:42 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.NameValidationTest.validateName(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="FAIL" signature="validateName(java.lang.reflect.Method)[pri:0, instance:test.NameValidationTest@1537c744]" name="validateName" duration-ms="4422" started-at="2020-03-30T22:37:42 EET" finished-at="2020-03-30T22:37:47 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void test.NameValidationTest.validateName(java.lang.reflect.Method) throws java.lang.InterruptedException]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:751)
+at org.testng.Assert.assertEquals(Assert.java:761)
+at test.NameValidationTest.validateName(NameValidationTest.java:37)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateName -->
+        <test-method status="PASS" signature="prepareReport(org.testng.ITestResult)[pri:0, instance:test.NameValidationTest@1537c744]" name="prepareReport" is-config="true" duration-ms="408" started-at="2020-03-30T22:37:47 EET" finished-at="2020-03-30T22:37:47 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateName status=FAILURE method=NameValidationTest.validateName(java.lang.reflect.Method)[pri:0, instance:test.NameValidationTest@1537c744] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- prepareReport -->
+      </class> <!-- test.NameValidationTest -->
+    </test> <!-- test -->
+  </suite> <!-- task -->
 </testng-results>

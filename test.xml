@@ -5,9 +5,9 @@
 		<classes>
 			<class name="test.TestBase" />
 			<class name="test.SignUpTest" />
-			<class name="test.HomeTest" />
-			<class name="test.LoginTest." />
-			<class name="test.FailedRegisteration" />
+			<class name="test.LoginTest" />
+			<class name="test.MailValidationTest" />
+			<class name="test.NameValidationTest" /> 
 		</classes>
 	</test>
 </suite>
